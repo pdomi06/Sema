@@ -16,7 +16,7 @@ This project is a Discord bot with several features, including system logging, m
 
 1. Clone the repository
 2. Install the dependencies with `npm install`
-3. Create a `.env` file with your values
+3. Create a `.env` file with your values:
  ```
 CLIENTID=<Your application id>
 GUILDID=<Your default guild id>
