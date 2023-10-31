@@ -32,7 +32,7 @@ client.distube = new DisTube(client, {
 
   })
   const { MongoClient, ServerApiVersion } = require('mongodb');
-  const uri = "mongodb+srv://pdomi06:QdZybtBjP8662QEU@semamain.vcgr6vl.mongodb.net/?retryWrites=true&w=majority";
+  const uri = process.env.MONGO_URI;
   // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 client.mongos = new MongoClient(uri, {
 	serverApi: {
