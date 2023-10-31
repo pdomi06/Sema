@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { client } = require("../../index.js");
-const config = require("../../configs/config.json")
+require('dotenv').config()
 
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
             let result = client.distube.search(song)
             console.log(result)
             const playEmbed = new EmbedBuilder()
-            .setColor(config.green)
+            .setColor(process.env.GREEN)
             .setTitle(` ✅ | Preparing song: `)
             .setDescription(song)
             .setTimestamp()

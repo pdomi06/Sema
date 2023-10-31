@@ -1,5 +1,5 @@
 const { EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js');
-const config = require('../configs/config.json')
+require('dotenv').config()
 
 module.exports = {
 	name: "playSong",
@@ -50,7 +50,7 @@ module.exports = {
 			}\` | Autoplay: ${queue.autoplay ? '✅' : '❌'}`
 
 		const playingEmbed = new EmbedBuilder()
-			.setColor(config.def_color)
+			.setColor(process.env.DEF_COLOR)
 			.setTitle(` 🎶 | Playing`)
 			.setURL(song.url)
 			.setThumbnail(song.thumbnail)

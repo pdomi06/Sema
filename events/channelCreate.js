@@ -1,5 +1,5 @@
 const { Events, EmbedBuilder } = require('discord.js');
-const config = require("../configs/config.json")
+require('dotenv').config()
 
 module.exports = {
 	name: Events.ChannelCreate,
@@ -18,7 +18,7 @@ module.exports = {
 		 if (isTextChannel) {
 
 			const tChCreateEmbed = new EmbedBuilder()
-			.setColor(config.green)
+			.setColor(process.env.GREEN)
 			.setTitle(`Channel created:`)
 			.addFields(
 				{ name: "Name: ", value: `<#${channel.id}>` },
@@ -30,7 +30,7 @@ module.exports = {
 	
 		} else if (isVoiceChannel) {
 			const vChCreateEmbed = new EmbedBuilder()
-			.setColor(config.green)
+			.setColor(process.env.GREEN)
 			.setTitle(`Channel created:`)
 			.addFields(
 				{ name: "Name: ", value: `<#${channel.id}>` },

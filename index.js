@@ -5,7 +5,7 @@ const { SoundCloudPlugin } = require('@distube/soundcloud')
 const { YtDlpPlugin } = require('@distube/yt-dlp')
 const { DisTube } = require('distube')
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
-const { TOKEN } = require('./configs/token.json');
+require('dotenv').config()
 
 
 const client = new Client({ intents: [
@@ -91,4 +91,4 @@ for (const folder of commandFolders) {
 	}
 }
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);

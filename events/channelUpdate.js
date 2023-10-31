@@ -1,6 +1,6 @@
 const { Events, EmbedBuilder } = require('discord.js');
 const { QuickDB } = require("quick.db");
-const config = require("../configs/config.json")
+require('dotenv').config()
 
 module.exports = {
 	name: Events.ChannelUpdate,
@@ -15,7 +15,7 @@ module.exports = {
 		if (!ch) return;
 		
 			const chUpdateEmbed = new EmbedBuilder()
-			.setColor(config.yellow)
+			.setColor(process.env.YELLOW)
 			.setTitle(`Channel updated:`)
 			.addFields({ name: "Name ", value: `<#${newChannel.id}>` })
 			.setTimestamp()

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const config = require("../../configs/config.json")
+require('dotenv').config()
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -43,7 +43,7 @@ module.exports = {
 		const user_avatar = `https://cdn.discordapp.com/avatars/${interaction.user.id}/${interaction.user.avatar}.png?size=1024`
 		
 		const foodEmbed = new EmbedBuilder()
-			.setColor(config.def_color)
+			.setColor(process.enb.DEF_COLOR)
 			.setTitle(`${interaction.user.username} \`${d.getFullYear()}:${month}:${day}\` napi kajája`)
 			.setThumbnail(user_avatar)
 			.addFields(

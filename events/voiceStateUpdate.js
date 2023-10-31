@@ -1,5 +1,5 @@
 const { Events, EmbedBuilder } = require('discord.js');
-const config = require("../configs/config.json");
+require('dotenv').config()
 
 module.exports = {
     name: Events.VoiceStateUpdate,
@@ -21,7 +21,7 @@ module.exports = {
 
             if (!oldUser.channelId && newUser) {
                 const VoiceStateUpdateEmbedJ = new EmbedBuilder()
-                    .setColor(config.green)
+                    .setColor(process.env.GREEN)
                     .setTitle(`\`${username}\` joined <#${user.channelId}>`)
                     .setTimestamp()
                     .setFooter({ text: ' ' });
@@ -29,7 +29,7 @@ module.exports = {
             } 
             if (user.channelId == null){
                 const VoiceStateUpdateEmbedL = new EmbedBuilder()
-                    .setColor(config.red)
+                    .setColor(process.env.RED)
                     .setTitle(`\`${username}\` left <#${oldUser.channelId}>`)
                     .setTimestamp()
                     .setFooter({ text: ' ' });

@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const locales = require('../../configs/locales.json')
-const config = require('../../configs/config.json')
+require('dotenv').config()
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -28,7 +28,7 @@ module.exports = {
 	
 
 		const guildEmbed = new EmbedBuilder()
-			.setColor(config.green)
+			.setColor(process.env.GREEN)
 			.setTitle(`${interaction.guild.name}${profile}`)
 			.addFields(
 				{ name: `🪪 | ${id}: `, value: `${interaction.guild.id}`, inline: true },

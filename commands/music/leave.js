@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { client } = require("../../index.js");
-const config = require("../../configs/config.json")
+require('dotenv').config()
 
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         client.distube.voices.leave(interaction)
         {
           const leaveEmbed = new EmbedBuilder()
-            .setColor(config.green)
+            .setColor(process.env.GREEN)
             .setTitle(`💣 | Disconnect`)
             .setTimestamp()
             .setFooter({ text: ' ' });

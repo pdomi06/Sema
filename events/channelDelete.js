@@ -1,6 +1,6 @@
 const { Events, EmbedBuilder } = require('discord.js');
 const { QuickDB } = require("quick.db");
-const config = require("../configs/config.json")
+require('dotenv').config()
 
 module.exports = {
 	name: Events.ChannelDelete,
@@ -19,7 +19,7 @@ module.exports = {
 		if (isTextChannel) {
 
 			const tChDeleteEmbed = new EmbedBuilder()
-			.setColor(config.red)
+			.setColor(process.env.RED)
 			.setTitle(`Channel deleted:`)
 			.addFields(
 				{ name: "Name: ", value: channel.name },
@@ -31,7 +31,7 @@ module.exports = {
 	
 		} else if (isVoiceChannel) {
 			const vChDeleteEmbed = new EmbedBuilder()
-			.setColor(config.red)
+			.setColor(process.env.RED)
 			.setTitle(`Channel deleted:`)
 			.addFields(
 				{ name: "Name: ", value: channel.name },

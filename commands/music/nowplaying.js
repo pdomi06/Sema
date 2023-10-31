@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { client } = require("../../index.js");
-const config = require("../../configs/config.json")
+require('dotenv').config()
 
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
         const queue = client.distube.getQueue(interaction)
         if (!queue) {
           const noQueueEmbed = new EmbedBuilder()
-            .setColor(config.red)
+            .setColor(process.env.RED)
             .setTitle(`❌ | There is nothing in the queue`)
             .setTimestamp()
             .setFooter({ text: ' ' });
@@ -22,7 +22,7 @@ module.exports = {
         const song = queue.songs[0]
         console.log(song)
         const nowPlaingEmbed = new EmbedBuilder()
-        .setColor(config.green)
+        .setColor(process.env.GREEN)
         .setTitle(` ⏺️ | Current song: ${song.name}`)
         .setURL(song.url)
         .setThumbnail(song.thumbnail)
