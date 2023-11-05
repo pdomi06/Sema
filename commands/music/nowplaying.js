@@ -20,7 +20,7 @@ module.exports = {
           await interaction.reply({ embeds: [noQueueEmbed] }) 
         } 
         const song = queue.songs[0] 
-        console.log(song) 
+         
         const nowPlaingEmbed = new EmbedBuilder() 
         .setColor(process.env.GREEN) 
         .setTitle(` ⏺️ | Current song: ${song.name}`) 

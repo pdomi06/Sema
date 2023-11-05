@@ -22,7 +22,7 @@ module.exports = {
 		const db = new QuickDB(); 
  
 		await db.set(`${interaction.guild.id}`, { log_id: interaction.options.get('channel').value }); 
-		console.log(interaction.options.get('channel').value) 
+		 
 		const successEmbed = new EmbedBuilder() 
 			.setColor(0x00FF00) 
 			.setTitle("Succesfully intalled THE log system") 
