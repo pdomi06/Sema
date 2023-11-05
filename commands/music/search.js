@@ -25,7 +25,7 @@ module.exports = {
         try { 
        
             let result = client.distube.search(song) 
-            console.log(result) 
+             
             const playEmbed = new EmbedBuilder() 
             .setColor(process.env.GREEN) 
             .setTitle(" ✅ | Preparing song: ") 
