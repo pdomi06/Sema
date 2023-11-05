@@ -29,7 +29,7 @@ DEF_COLOR=<Your color>
 TOKEN=<Your token>
  ```
 4. Run `dp.js` with your guild ID to set up the application integration
-5. Run the bot with `npm start`
+5. Run the bot with `node .` or `node <file_name>`
 
 ## 📖 Usage
 
