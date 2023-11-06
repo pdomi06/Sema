@@ -41,7 +41,7 @@ module.exports = {
             decodedMessage = parseInt(message, 10).toString(8);
             break;
           default:
-            return await interaction.reply('Invalid encoding type.');
+            return interaction.reply('Invalid encoding type.');
         }
     
         await interaction.reply({content: decodedMessage, ephemeral: true});

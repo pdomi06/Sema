@@ -17,7 +17,7 @@ module.exports = {
         .setTimestamp() 
         .setFooter({ text: ' ' }); 
  
-      return await interaction.reply({ embeds: [noQueueEmbed] }); 
+      return interaction.reply({ embeds: [noQueueEmbed] }); 
     } 
  
     const songs = queue.songs.map((song, i) => `${i === 0 ? 'Playing:' : `${i}.`} ${song.name} - \`${song.formattedDuration}\``); 
