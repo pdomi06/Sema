@@ -1,4 +1,5 @@
-const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js'); 
+const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { client } = require("../../index.js"); 
  
 module.exports = { 
 	data: new SlashCommandBuilder() 
@@ -12,8 +13,7 @@ module.exports = {
 		}) 
 		.setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels,), 
 	async execute(interaction) { 
-		const embedMessage = await interaction.channel.messages.fetch(); 
-		 
-		await interaction.reply({ embeds: [embedMessage.embeds]}) 
+		const testData = client.mongos.db("Test").collection("Test").findOne()
+		console.log(testData)
 	}, 
 };
