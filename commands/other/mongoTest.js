@@ -4,19 +4,12 @@ const { client } = require("../../index.js");
 module.exports = { 
 	data: new SlashCommandBuilder() 
 		.setName('mongo_test') 
-		.setNameLocalizations({ 
-			hu: 'hazifeladat_edit', 
-		}) 
-		.setDescription('Sets up the homework embed.') 
-		.setDescriptionLocalizations({ 
-			hu: 'Elkészíti a házi embedet.' 
-		}) 
+		.setDescription('Tests the mongo connection between cluster and app.') 
 		.setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels,), 
 	async execute(interaction) {
 		try {
 			const collection = client.mongos.db("Test").collection("Test");
-			const testData = await collection.findOne()
-			console.log(testData)
+			await collection.findOne()
 		} catch (error) {
 			console.error(error);
 		} finally {
