@@ -27,7 +27,7 @@ module.exports = {
 				if (ready <= Date.now()) { 
 					const reward = await db.get(`${interaction.user.id}.work_reward`) 
 					await db.add(`${interaction.user.id}.balance`,reward) 
-					balance = await db.get(`${interaction.user.id}.balance`) 
+					//balance = await db.get(`${interaction.user.id}.balance`) 
 					await db.set(`${interaction.user.id}.work_timeout`,0) 
 					await db.set(`${interaction.user.id}.work_finish`,0) 
 					await db.set(`${interaction.user.id}.work_finish_date`, "dateFormated") 
