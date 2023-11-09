@@ -62,7 +62,7 @@ module.exports = {
     .setColor(process.env.GREEN) 
     .setTitle("🎛️ | Current Queue Filter(s):") 
     .addFields( 
-      {name : "Filter(s)", value: `\`${queue.filters.names.join(', ') || 'Off'}\``} 
+      {name : "Filter(s)", value: `\`${queue.filters.names.join(', ') ?? 'Off'}\``} 
     ) 
     .setTimestamp() 
     .setFooter({ text: ' ' }); 

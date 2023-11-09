@@ -54,7 +54,7 @@ module.exports = {
 				{ name: "Name:", value: `\`${song.name}\``, inline: true }, 
 				{ name: "Duration:", value: `|\`${song.formattedDuration}\`|`, inline: true }, 
 				{ name: "Requester:", value: `${song.user}`, inline: true }, 
-				{ name: "Filters:", value: `\`${queue.filters.names.join(', ') || 'None'}\`` }, 
+				{ name: "Filters:", value: `\`${queue.filters.names.join(', ') ?? 'None'}\`` }, 
 				{ name: "Queue:", value: `Volume: \`${queue.volume}%\` | Loop: \`${queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off' 
 			}\` | Autoplay: ${queue.autoplay ? '✅' : '❌'}` } 
 			) 
