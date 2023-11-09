@@ -1,51 +1,47 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const { client } = require("../index.js");
-require('dotenv').config()
-
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('slowmo')
-    .setDescription('Applies slowmo to the music. (toggle)'),
+    .setName("slowmo")
+    .setDescription("Applies slowmo to the music. (toggle)"),
 
   async execute(interaction) {
-    const queue = client.distube.getQueue(interaction)
+    const queue = client.distube.getQueue(interaction);
 
     if (!queue) {
       const noQueueEmbed = new EmbedBuilder()
         .setColor(process.env.RED)
         .setTitle("❌ | There is nothing in the queue")
         .setTimestamp()
-        .setFooter({ text: ' ' });
+        .setFooter({ text: " " });
 
-      await interaction.reply({ embeds: [noQueueEmbed], ephemeral: true })
+      await interaction.reply({ embeds: [noQueueEmbed], ephemeral: true });
     }
 
-    const filter = "vaporwave"
+    const filter = "vaporwave";
     let title;
     if (Object.keys(client.distube.filters).includes(filter)) {
       if (queue.filters.has(filter)) {
-        queue.filters.remove(filter)
-        title = "✅ | Slowmo removed"
+        queue.filters.remove(filter);
+        title = "✅ | Slowmo removed";
       } else {
-        queue.filters.add(filter)
-        title = "✅ | Slowmo added:"
+        queue.filters.add(filter);
+        title = "✅ | Slowmo added:";
       }
     }
-
 
     const slowmoEmbed = new EmbedBuilder()
       .setColor(process.env.GREEN)
       .setTitle(title)
       .setTimestamp()
-      .setFooter({ text: ' ' });
+      .setFooter({ text: " " });
 
-    await interaction.reply({ embeds: [slowmoEmbed], ephemeral: true })
+    await interaction.reply({ embeds: [slowmoEmbed], ephemeral: true });
 
     setTimeout(() => {
       interaction.deleteReply();
     }, 5000);
   },
-
 };
-
