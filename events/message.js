@@ -1,12 +1,11 @@
-const { Events } = require('discord.js');
+const { Events } = require("discord.js");
 
 module.exports = {
-	name: Events.MessageCreate,
-	async execute(message) {
-
-		const msg = message.content
-		if (msg.includes("kurva") === true){
-			message.delete()
-		}
-	},
+  name: Events.MessageCreate,
+  async execute(message) {
+    const msg = message.content;
+    if (msg.includes("kurva") === true) {
+      message.delete();
+    }
+  },
 };
