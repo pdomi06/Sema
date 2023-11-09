@@ -2,6 +2,6 @@ module.exports = {
 	name: "finish", 
 	async execute(queue) { 
          
-        queue.textChannel.send('Finished!') 
+        await queue.textChannel.send('Finished!') 
 	}, 
 };

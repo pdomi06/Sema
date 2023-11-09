@@ -32,7 +32,7 @@ module.exports = {
             .setTimestamp() 
             .setFooter({ text: ' ' }); 
  
-         interaction.reply({ embeds: [playEmbed], ephemeral: true }); 
+         await interaction.reply({ embeds: [playEmbed], ephemeral: true }); 
         } catch (error) { 
           console.error(error); 
            interaction.reply({ content: '❌ Error executing command.', ephemeral: true }); 

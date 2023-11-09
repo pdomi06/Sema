@@ -31,7 +31,7 @@ module.exports = {
         .setTimestamp() 
         .setFooter({ text: ' ' }); 
  
-      interaction.reply({ embeds: [queueEmbed] }); 
+      await interaction.reply({ embeds: [queueEmbed] }); 
     } 
   }, 
 }; 

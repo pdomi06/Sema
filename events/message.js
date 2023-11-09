@@ -6,7 +6,7 @@ module.exports = {
 
 		const msg = message.content
 		if (msg.includes("kurva") === true){
-			message.delete()
+			await message.delete()
 		}
 	},
 };

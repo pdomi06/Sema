@@ -105,7 +105,7 @@ module.exports = {
 		});
 
 		req.write('type=stock');
-		req.end();
+		await req.end();
 
 	},
 };
