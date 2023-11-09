@@ -75,7 +75,7 @@ module.exports = {
 				for (const x of d) {
 					const name = x['rname'];
 					const price = x['arfolyam'];
-					if (name == interaction.options.get('stock').value) {
+					if (name === interaction.options.get('stock').value) {
 					listN.push(name)
 					listP.push(price)
 					}

@@ -46,19 +46,19 @@ module.exports = {
  
  
  
-        if (type == "get") { 
+        if (type === "get") { 
             let result = await db.get(`${id}.${pocket}`) 
             await interaction.reply(`${result}`) 
-        } else if (type == "set") { 
-            var value = interaction.options.get("value").value 
-            if (value_type == "int") { 
-                var value = parseInt(value) 
+        } else if (type === "set") { 
+            let value = interaction.options.get("value").value 
+            if (value_type === "int") { 
+                let value = parseInt(value) 
      
-            } else if (value_type == "booling") { 
-                if (value.toLowerCase() == "true") { 
-                    var value = true 
-                } else if (value.toLowerCase() == "false") { 
-                    var value = false 
+            } else if (value_type === "booling") { 
+                if (value.toLowerCase() === "true") { 
+                    let value = true 
+                } else if (value.toLowerCase() === "false") { 
+                    let value = false 
                 } else { 
                     await interaction.reply("Booling value only can be \`true\` or \`false\`") 
                 } 

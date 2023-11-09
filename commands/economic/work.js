@@ -30,12 +30,12 @@ module.exports = {
 
 		setup = await db.get(`${interaction.user.id}.setup`)
 
-		if (setup == true) {
+		if (setup === true) {
 
 			const workFinish = await db.get(`${interaction.user.id}.work_finish`)
 			const access = await db.get(`${interaction.user.id}.interaction_access`)
 
-			if (workFinish < Date.now() && access == true) {
+			if (workFinish < Date.now() && access === true) {
 				const h = interaction.options.get('hours').value
 				const m = interaction.options.get('minutes').value
 

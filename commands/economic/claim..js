@@ -18,11 +18,11 @@ module.exports = {
 		setup = await db.get(`${interaction.user.id}.setup`) 
  
  
-		if (setup == true) { 
+		if (setup === true) { 
  
 			const rights = await db.get(`${interaction.user.id}.working`) 
  
-			if (rights == true) { 
+			if (rights === true) { 
 				const ready = await db.get(`${interaction.user.id}.work_finish`) 
 				if (ready <= Date.now()) { 
 					const reward = await db.get(`${interaction.user.id}.work_reward`) 

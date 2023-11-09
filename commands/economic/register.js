@@ -17,7 +17,7 @@ module.exports = {
  
 		setup = await db.get(`${interaction.user.id}.setup`) 
  
-		if (setup == undefined || setup == false) { 
+		if (setup === undefined || setup === false) { 
  
 			await db.set(`${interaction.user.id}`, { 
 				balance: 0, 

@@ -33,12 +33,12 @@ module.exports = {
  
 		setup = await db.get(`${interaction.user.id}.setup`) 
  
-		if (setup == true) { 
+		if (setup === true) { 
 			const choice = interaction.options.get("confirm").value 
-			if (choice == "YES"){ 
+			if (choice === "YES"){ 
 			const rights = await db.get(`${interaction.user.id}.working`) 
  
-			if (rights == true) { 
+			if (rights === true) { 
  
 					balance = await db.get(`${interaction.user.id}.balance`) 
 					await db.set(`${interaction.user.id}.work_timeout`,0) 
