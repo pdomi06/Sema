@@ -60,7 +60,7 @@ module.exports = {
 			) 
 			.setTimestamp() 
 			.setFooter({ text: ' ' }); 
-		queue.textChannel.send({ embeds: [playingEmbed], components: [row1, row2] }) 
+		await queue.textChannel.send({ embeds: [playingEmbed], components: [row1, row2] }) 
  
 	}, 
 };
