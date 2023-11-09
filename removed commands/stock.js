@@ -80,14 +80,14 @@ module.exports = {
 					listP.push(price)
 					}
 				}
-				prof = locales[`${interaction.locale}_stockjs_profile`] ?? "Eötvös stock"
+				const prof = locales[`${interaction.locale}_stockjs_profile`] ?? "Eötvös stock"
 				const stockEmbed = new EmbedBuilder()
 				  .setColor(0xFFFFFF)
 				  .setTitle(prof)
 				  .setThumbnail('https://www.eotvosszki.hu/_next/image?url=https%3A%2F%2Fbg-eotvos.cms.intezmeny.edir.hu%2Fuploads%2Fthumbnail_elg_logo_8fc4582687.PNG&w=128&q=90');
 				
 				for (let i = 0; i < listN.length; i++) {
-					sellP = listP[i]*0.9
+					const sellP = listP[i]*0.9
 				  stockEmbed.addFields(
 					{ name: `${listN[i]} részvény: `, value: `${listP[i]} - ${sellP.toFixed(2)}` },
 					{ name: `10db ${listN[i]} részvény: `, value: `${listP[i]*10} - ${sellP.toFixed(2)*10}` }
