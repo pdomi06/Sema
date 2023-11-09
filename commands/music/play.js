@@ -20,7 +20,7 @@ module.exports = {
           return interaction.reply({ content: "You must be in a voice channel to use this command.", ephemeral: true }); 
         } 
        
-        const queue = client.distube.getQueue(interaction.guildId); 
+        //const queue = client.distube.getQueue(interaction.guildId); 
        
         try { 
        

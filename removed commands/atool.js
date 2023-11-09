@@ -1,5 +1,4 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js'); 
-const locales = require('../configs/locales.json') 
 const { QuickDB } = require("quick.db"); 
  
 module.exports = { 

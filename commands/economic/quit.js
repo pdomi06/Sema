@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, Invite } = require('discord.js'); 
+const { SlashCommandBuilder } = require('discord.js'); 
 const locales = require('../../configs/locales.json') 
  
 module.exports = { 
@@ -40,7 +40,7 @@ module.exports = {
  
 			if (rights === true) { 
  
-					const balance = await db.get(`${interaction.user.id}.balance`) 
+					//const balance = await db.get(`${interaction.user.id}.balance`) 
 					await db.set(`${interaction.user.id}.work_timeout`,0) 
 					await db.set(`${interaction.user.id}.work_finish`,0) 
 					await db.set(`${interaction.user.id}.work_finish_date`, "dateFormated") 
@@ -49,10 +49,10 @@ module.exports = {
 					await db.set(`${interaction.user.id}.working`,false) 
  
  
-					const prof = locales[`${interaction.locale}_claimjs_profile`] ?? "'s chief" 
-					const payoutBefore = locales[`${interaction.locale}_claimjs_payoutBefore`] ?? "-- Good job my little worker. Now you deserv your paycheck." 
-					const payoutOngoing = locales[`${interaction.locale}_claimjs_payoutOngoing`] ?? "-- Thanks chief! Can I ask you how much do I get again?" 
-					const payoutAfter = locales[`${interaction.locale}_claimjs_payoutAfter`] ?? "-- Yeah sure, you get:" 
+					//const prof = locales[`${interaction.locale}_claimjs_profile`] ?? "'s chief" 
+					//const payoutBefore = locales[`${interaction.locale}_claimjs_payoutBefore`] ?? "-- Good job my little worker. Now you deserv your paycheck." 
+					//const payoutOngoing = locales[`${interaction.locale}_claimjs_payoutOngoing`] ?? "-- Thanks chief! Can I ask you how much do I get again?" 
+					//const payoutAfter = locales[`${interaction.locale}_claimjs_payoutAfter`] ?? "-- Yeah sure, you get:" 
  
 					await interaction.reply("Succesfully stoped work!") 
 			} else { 

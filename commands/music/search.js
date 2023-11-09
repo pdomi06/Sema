@@ -20,11 +20,11 @@ module.exports = {
           return interaction.reply({ content: "You must be in a voice channel to use this command.", ephemeral: true }); 
         } 
        
-        const queue = client.distube.getQueue(interaction.guildId); 
+        //const queue = client.distube.getQueue(interaction.guildId); 
        
         try { 
        
-            let result = client.distube.search(song) 
+            //let result = client.distube.search(song) 
              
             const playEmbed = new EmbedBuilder() 
             .setColor(process.env.GREEN) 

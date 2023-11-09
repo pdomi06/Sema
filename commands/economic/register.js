@@ -1,5 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js'); 
-const locales = require('../../configs/locales.json') 
+const { SlashCommandBuilder } = require('discord.js'); 
  
 module.exports = { 
 	data: new SlashCommandBuilder() 

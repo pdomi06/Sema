@@ -1,4 +1,3 @@
-const { profile } = require('console');
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const locales = require('../configs/locales.json')
 

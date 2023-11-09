@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, Invite } = require('discord.js'); 
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js'); 
 const locales = require('../../configs/locales.json') 
  
 module.exports = { 

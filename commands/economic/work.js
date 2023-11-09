@@ -70,7 +70,7 @@ module.exports = {
 				}
 
 				const dateFormated = `${d.getFullYear()}/${month}/${day} ${hour}:${minute}:${second}`
-				const b = await db.get(`${interaction.user.id}.balance`)
+				//const b = await db.get(`${interaction.user.id}.balance`)
 				await db.set(`${interaction.user.id}.work_timeout`,time)
 				await db.set(`${interaction.user.id}.work_finish`,workFinishMs)
 				await db.set(`${interaction.user.id}.work_finish_date`, dateFormated)

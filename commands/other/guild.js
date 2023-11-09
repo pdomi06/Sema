@@ -13,7 +13,7 @@ module.exports = {
 			hu: 'Szerverről nyújt információkat.'
 		}),
 	async execute(interaction) {
-		const guild_pic = `https://cdn.discordapp.com/avatars/${interaction.guild.id}/${interaction.guild.icon}.png?size=1024`
+		//const guild_pic = `https://cdn.discordapp.com/avatars/${interaction.guild.id}/${interaction.guild.icon}.png?size=1024`
 
 		const profile = locales[`${interaction.locale}_guildjs_profile`] ?? " guild infos"
 		const id = locales[`${interaction.locale}_guildjs_id`] ?? "Id"

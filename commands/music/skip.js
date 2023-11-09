@@ -19,7 +19,7 @@ module.exports = {
           await interaction.reply({ embeds: [noQueueEmbed], ephemeral: true }) 
         } 
         try { 
-          const song = await queue.skip() 
+          await queue.skip() 
           await interaction.reply({content: "Skipped the song", ephemeral: true }) 
  
         } catch (e) { 
