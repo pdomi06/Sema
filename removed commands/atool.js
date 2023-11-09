@@ -52,13 +52,13 @@ module.exports = {
         } else if (type === "set") { 
             let value = interaction.options.get("value").value 
             if (value_type === "int") { 
-                let value = parseInt(value) 
+                 value = parseInt(value) 
      
             } else if (value_type === "booling") { 
                 if (value.toLowerCase() === "true") { 
-                    let value = true 
+                     value = true 
                 } else if (value.toLowerCase() === "false") { 
-                    let value = false 
+                     value = false 
                 } else { 
                     await interaction.reply("Booling value only can be \`true\` or \`false\`") 
                 } 

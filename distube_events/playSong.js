@@ -45,10 +45,6 @@ module.exports = {
 				.setStyle(ButtonStyle.Primary), 
 		) 
  
-		const status = queue => 
-			`Volume: \`${queue.volume}%\` | Loop: \`${queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off' 
-			}\` | Autoplay: ${queue.autoplay ? '✅' : '❌'}` 
- 
 		const playingEmbed = new EmbedBuilder() 
 			.setColor(process.env.DEF_COLOR) 
 			.setTitle(" 🎶 | Playing") 
@@ -59,7 +55,8 @@ module.exports = {
 				{ name: "Duration:", value: `|\`${song.formattedDuration}\`|`, inline: true }, 
 				{ name: "Requester:", value: `${song.user}`, inline: true }, 
 				{ name: "Filters:", value: `\`${queue.filters.names.join(', ') || 'None'}\`` }, 
-				{ name: "Queue:", value: status(queue) } 
+				{ name: "Queue:", value: `Volume: \`${queue.volume}%\` | Loop: \`${queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off' 
+			}\` | Autoplay: ${queue.autoplay ? '✅' : '❌'}` } 
 			) 
 			.setTimestamp() 
 			.setFooter({ text: ' ' }); 
