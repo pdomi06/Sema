@@ -9,3 +9,6 @@ name = "javascript"
     "mongo",
     "cypress"
   ]
+
+[[transformers]]
+name = "prettier"
