@@ -50,8 +50,8 @@ module.exports = {
 				const listP = []
 				const d = JSON.parse(data);
 				for (const x of d) {
-					const name = x['rname'];
-					const price = x['arfolyam'];
+					const name = x.rname;
+					const price = x.arfolyam;
 					listN.push(name)
 					listP.push(price)
 				}
