@@ -1,6 +1,8 @@
 # 🤖 Sema the ultimate Server-manager 🎵
 
 [![Discord Server](https://img.shields.io/discord/123456789012345678?color=7289DA&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/fVCZEmgws5)
+[![DeepSource](https://app.deepsource.com/gh/pdomi06/Sema.svg/?label=active+issues&show_trend=true&token=8Dns4wboJzsClyuwwuG5XqFv)](https://app.deepsource.com/gh/pdomi06/Sema/)
+[![DeepSource](https://app.deepsource.com/gh/pdomi06/Sema.svg/?label=resolved+issues&show_trend=true&token=8Dns4wboJzsClyuwwuG5XqFv)](https://app.deepsource.com/gh/pdomi06/Sema/)
 
 ## 📝 Project Description
 
