@@ -49,27 +49,14 @@ module.exports = {
 				const d = new Date(workFinishMs)
 
 				const month = d.getMonth() + 1
-				const day = d.getDate()
-				const hour = d.getHours()
-				const minute = d.getMinutes()
-				const second = d.getSeconds()
-				if (month < 10) {
-					month = `0${month}`
-				}
-				if (day < 10) {
-					day = `0${day}`
-				}
-				if (hour < 10) {
-					hour = `0${hour}`
-				}
-				if (minute < 10) {
-					minute = `0${minute}`
-				}
-				if (second < 10) {
-					second = `0${second}`
-				}
 
-				const dateFormated = `${d.getFullYear()}/${month}/${day} ${hour}:${minute}:${second}`
+				const formattedMonth = month.toString().padStart(2, '0');
+				const formattedDay = d.getDate().toString().padStart(2, '0');
+				const formattedHour = d.getHours().toString().padStart(2, '0');
+				const formattedMinute = d.getMinutes().toString().padStart(2, '0');
+				const formattedSecond = d.getSeconds().toString().padStart(2, '0');
+
+				const dateFormated = `${d.getFullYear()}/${formattedMonth}/${formattedDay} ${formattedHour}:${formattedMinute}:${formattedSecond}`;
 				//const b = await db.get(`${interaction.user.id}.balance`)
 				await db.set(`${interaction.user.id}.work_timeout`,time)
 				await db.set(`${interaction.user.id}.work_finish`,workFinishMs)
