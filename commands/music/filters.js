@@ -59,7 +59,7 @@ module.exports = {
  
  
     const filterEmbed = new EmbedBuilder() 
-    .setColor(config.green) 
+    .setColor(process.env.GREEN) 
     .setTitle("🎛️ | Current Queue Filter(s):") 
     .addFields( 
       {name : "Filter(s)", value: `\`${queue.filters.names.join(', ') || 'Off'}\``} 

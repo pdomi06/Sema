@@ -48,11 +48,11 @@ module.exports = {
 				const workFinishMs = Date.now() + time
 				const d = new Date(workFinishMs)
 
-				month = d.getMonth() + 1
-				day = d.getDate()
-				hour = d.getHours()
-				minute = d.getMinutes()
-				second = d.getSeconds()
+				const month = d.getMonth() + 1
+				const day = d.getDate()
+				const hour = d.getHours()
+				const minute = d.getMinutes()
+				const second = d.getSeconds()
 				if (month < 10) {
 					month = `0${month}`
 				}
@@ -70,7 +70,7 @@ module.exports = {
 				}
 
 				const dateFormated = `${d.getFullYear()}/${month}/${day} ${hour}:${minute}:${second}`
-				b = await db.get(`${interaction.user.id}.balance`)
+				const b = await db.get(`${interaction.user.id}.balance`)
 				await db.set(`${interaction.user.id}.work_timeout`,time)
 				await db.set(`${interaction.user.id}.work_finish`,workFinishMs)
 				await db.set(`${interaction.user.id}.work_finish_date`, dateFormated)

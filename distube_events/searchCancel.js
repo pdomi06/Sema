@@ -1,3 +1,5 @@
+const { client } = require("../../index.js"); 
+
 module.exports = {
 	name: "searchCancel",
 	async execute(message) {

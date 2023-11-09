@@ -40,7 +40,7 @@ module.exports = {
  
 			if (rights === true) { 
  
-					balance = await db.get(`${interaction.user.id}.balance`) 
+					const balance = await db.get(`${interaction.user.id}.balance`) 
 					await db.set(`${interaction.user.id}.work_timeout`,0) 
 					await db.set(`${interaction.user.id}.work_finish`,0) 
 					await db.set(`${interaction.user.id}.work_finish_date`, "dateFormated") 

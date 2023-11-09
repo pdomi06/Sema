@@ -5,8 +5,8 @@ module.exports = {
 	name: "playSong", 
 	async execute(queue, song) { 
  
-		row1 = new ActionRowBuilder(); 
-		row2 = new ActionRowBuilder(); 
+		const row1 = new ActionRowBuilder(); 
+		const row2 = new ActionRowBuilder(); 
  
 		row1.addComponents( 
 			new ButtonBuilder() 

@@ -25,10 +25,10 @@ module.exports = {
      
     if (Object.keys(client.distube.filters).includes(filter)) { 
       if (queue.filters.has(filter)){ queue.filters.remove(filter) 
-      title = "✅ | Speedup removed"  
+      const title = "✅ | Speedup removed"  
       } else { 
         queue.filters.add(filter) 
-        title = "✅ | Speedup added:" 
+       const title = "✅ | Speedup added:" 
       } 
     } 
  

@@ -4,7 +4,7 @@ module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
 
-		msg = message.content
+		const msg = message.content
 		if (msg.includes("kurva") === true){
 			message.delete()
 		}
