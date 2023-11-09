@@ -1,6 +1,6 @@
 module.exports = { 
 	name: "searchDone", 
-	async execute(message) { 
+	execute(message) { 
         console.log(message)
 	}, 
 };
