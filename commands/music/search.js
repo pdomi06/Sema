@@ -1,5 +1,4 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js'); 
-const { client } = require("../../index.js"); 
 require('dotenv').config() 
  
  
