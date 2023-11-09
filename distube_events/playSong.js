@@ -30,20 +30,20 @@ module.exports = {
 				.setEmoji("⏭️") 
 				.setStyle(ButtonStyle.Primary), 
 		) 
-		row2.addComponents( 
-			new ButtonBuilder() 
-				.setCustomId("autoplay") 
-				.setEmoji("📻") 
-				.setStyle(ButtonStyle.Primary), 
-			new ButtonBuilder() 
-				.setCustomId("speedup") 
-				.setEmoji("🚀") 
-				.setStyle(ButtonStyle.Primary), 
-			new ButtonBuilder() 
-				.setCustomId("slowmo") 
-				.setEmoji("♿") 
-				.setStyle(ButtonStyle.Primary), 
-		) 
+//		row2.addComponents( 
+//			new ButtonBuilder() 
+//				.setCustomId("autoplay") 
+//				.setEmoji("📻") 
+//				.setStyle(ButtonStyle.Primary), 
+//			new ButtonBuilder() 
+//				.setCustomId("speedup") 
+//				.setEmoji("🚀") 
+//				.setStyle(ButtonStyle.Primary), 
+//			new ButtonBuilder() 
+//				.setCustomId("slowmo") 
+//				.setEmoji("♿") 
+//				.setStyle(ButtonStyle.Primary), 
+//		) 
  
 		const playingEmbed = new EmbedBuilder() 
 			.setColor(process.env.DEF_COLOR) 
