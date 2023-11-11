@@ -21,20 +21,20 @@ module.exports = {
 		.setDescription('vacsora') 
 		.setRequired(true)), 
 	async execute(interaction) { 
-		const d = new Date() 
+		const date = new Date() 
  
 		let month; 
-		if (d.getMonth() + 1 < 10) { 
-			month = `0${d.getMonth() + 1}`; 
+		if (date.getMonth() + 1 < 10) { 
+			month = `0${date.getMonth() + 1}`; 
 		} else { 
-			month = `${d.getMonth() + 1}`; 
+			month = `${date.getMonth() + 1}`; 
 		} 
 		 
 		let day; 
-		if (d.getDate() < 10) { 
-			day = `0${d.getDate()}`; 
+		if (date.getDate() < 10) { 
+			day = `0${date.getDate()}`; 
 		} else { 
-			day = `${d.getDate()}`; 
+			day = `${date.getDate()}`; 
 		} 
 		  
 		const reggeli = interaction.options.get('reggeli').value 
@@ -44,7 +44,7 @@ module.exports = {
 		 
 		const foodEmbed = new EmbedBuilder() 
 			.setColor(process.enb.DEF_COLOR) 
-			.setTitle(`${interaction.user.username} \`${d.getFullYear()}:${month}:${day}\` napi kajája`) 
+			.setTitle(`${interaction.user.username} \`${date.getFullYear()}:${month}:${day}\` napi kajája`) 
 			.setThumbnail(user_avatar) 
 			.addFields( 
 				{ name: "Reggeli:", value: reggeli }, 
