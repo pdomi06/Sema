@@ -7,7 +7,7 @@ module.exports = {
 	async execute(oldChannel, newChannel) { 
 		const db = new QuickDB(); 
  
-		let id = await db.get(`${oldChannel.guild.id}.log_id`) 
+		const id = await db.get(`${oldChannel.guild.id}.log_id`) 
 		if (!id) return; 
  
  

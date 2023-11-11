@@ -6,7 +6,7 @@ module.exports = {
 	async execute(message) { 
 		const db = new QuickDB(); 
  
-		let id = await db.get(`${message.guild.id}.log_id`) 
+		const id = await db.get(`${message.guild.id}.log_id`) 
 		const ch = message.client.channels.cache.get(id) 
 			const messageDeleteEmbed = new EmbedBuilder() 
 			.setColor(0x870707) 

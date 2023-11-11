@@ -33,7 +33,7 @@ module.exports = {
  
         mode = queue.setRepeatMode(mode) 
         mode = mode ? (mode === 2 ? 'Queue' : 'Song') : 'Off' 
-        let emoji = mode ? (mode === 2 ? '🔁': '🔂') : '📴' 
+        const emoji = mode ? (mode === 2 ? '🔁': '🔂') : '📴' 
         const loopEmbed = new EmbedBuilder() 
         .setColor(process.env.GREEN) 
         .setTitle(` ${emoji} | Loop`) 

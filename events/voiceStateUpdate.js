@@ -9,7 +9,7 @@ module.exports = {
 
         const user = newUser ?? oldUser;
 
-        let id = await db.get(`${user.guild.id}.log_id`);
+        const id = await db.get(`${user.guild.id}.log_id`);
         if (!id) return;
         
         const ch = user.client.channels.cache.get(id);
