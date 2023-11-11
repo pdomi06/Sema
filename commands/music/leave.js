@@ -11,7 +11,7 @@ module.exports = {
       async execute(interaction) { 
  
         client.distube.voices.leave(interaction) 
-        { 
+        
           const leaveEmbed = new EmbedBuilder() 
             .setColor(process.env.GREEN) 
             .setTitle("💣 | Disconnect") 
@@ -19,7 +19,7 @@ module.exports = {
             .setFooter({ text: ' ' }); 
              
           await interaction.reply({ embeds: [leaveEmbed] }) 
-        } 
+        
       } 
        
 }; 
