@@ -2,7 +2,6 @@
 
 [![Discord Server](https://img.shields.io/discord/123456789012345678?color=7289DA&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/fVCZEmgws5)
 [![DeepSource](https://app.deepsource.com/gh/pdomi06/Sema.svg/?label=active+issues&show_trend=true&token=8Dns4wboJzsClyuwwuG5XqFv)](https://app.deepsource.com/gh/pdomi06/Sema/)
-[![DeepSource](https://app.deepsource.com/gh/pdomi06/Sema.svg/?label=resolved+issues&show_trend=true&token=8Dns4wboJzsClyuwwuG5XqFv)](https://app.deepsource.com/gh/pdomi06/Sema/)
 
 ## 📝 Project Description
 
@@ -19,7 +18,8 @@ This project is a Discord bot with several features, including system logging, m
 1. Clone the repository
 2. Install the dependencies with `npm install`
 3. Create a `.env` file with your values:
- ```
+
+```
 CLIENTID=<Your application id>
 GUILDID=<Your default guild id>
 AUTHOR=<Your username>
@@ -29,7 +29,8 @@ GREEN=357F1E
 YELLOW=ABAD0D
 DEF_COLOR=<Your color>
 TOKEN=<Your token>
- ```
+```
+
 4. Run `dp.js` with your guild ID to set up the application integration
 5. Run the bot with `node .` or `node <file_name>`
 
