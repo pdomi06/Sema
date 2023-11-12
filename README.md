@@ -18,7 +18,8 @@ This project is a Discord bot with several features, including system logging, m
 1. Clone the repository
 2. Install the dependencies with `npm install`
 3. Create a `.env` file with your values:
- ```
+
+```
 CLIENTID=<Your application id>
 GUILDID=<Your default guild id>
 AUTHOR=<Your username>
@@ -28,7 +29,8 @@ GREEN=357F1E
 YELLOW=ABAD0D
 DEF_COLOR=<Your color>
 TOKEN=<Your token>
- ```
+```
+
 4. Run `dp.js` with your guild ID to set up the application integration
 5. Run the bot with `node .` or `node <file_name>`
 
