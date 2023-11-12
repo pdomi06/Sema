@@ -9,12 +9,11 @@ module.exports = {
 	async execute(interaction) {
 		try {
 			const collection = client.mongos.db("Test").collection("Test");
-			await collection.findOne()
+			let result = await collection.findOne()
+			interaction.reply(`Working: ${result.Test}`);
 		} catch (error) {
 			console.error(error);
-		} finally {
-			interaction.reply("Working");
-		}
+		} 
 	}
 
 	};
