@@ -1,4 +1,5 @@
 const { Events, EmbedBuilder } = require("discord.js");
+const { QuickDB } = require("quick.db");
 require("dotenv").config();
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
     const db = new QuickDB();
 
     const id = await db.get(`${newMessage.guild.id}.log_id`);
-    const ch = message.client.channels.cache.get(id);
+    const ch = newMessage.client.channels.cache.get(id);
     const messageUpdateEmbed = new EmbedBuilder()
       .setColor(process.env.YELLOW)
       .setTitle("Message edited")
