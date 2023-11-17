@@ -1,6 +1,6 @@
-module.exports = {
-	name: "searchDone",
-	async execute(message) {
-        console.log("asd")
-	},
+module.exports = { 
+	name: "searchDone", 
+	execute(message) { 
+        console.log(message)
+	}, 
 };

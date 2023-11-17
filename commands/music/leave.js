@@ -1,25 +1,21 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const { client } = require("../../index.js");
-const config = require("../../configs/config.json")
-
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('leave')
-    .setDescription('Leaves the channel.'),
+    .setName("leave")
+    .setDescription("Leaves the channel."),
 
-      async execute(interaction) {
+  async execute(interaction) {
+    client.distube.voices.leave(interaction);
 
-        client.distube.voices.leave(interaction)
-        {
-          const leaveEmbed = new EmbedBuilder()
-            .setColor(config.green)
-            .setTitle(`💣 | Disconnect`)
-            .setTimestamp()
-            .setFooter({ text: ' ' });
-            
-          await interaction.reply({ embeds: [leaveEmbed] })
-        }
-      }
-      
+    const leaveEmbed = new EmbedBuilder()
+      .setColor(process.env.GREEN)
+      .setTitle("💣 | Disconnect")
+      .setTimestamp()
+      .setFooter({ text: " " });
+
+    await interaction.reply({ embeds: [leaveEmbed] });
+  },
 };

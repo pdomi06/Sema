@@ -1,0 +1,15 @@
+version = 1
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  environment = [
+    "nodejs",
+    "mongo",
+    "cypress"
+  ]
+  skip_doc_coverage = ["class-expression", "method-definition"]
+
+[[transformers]]
+name = "prettier"

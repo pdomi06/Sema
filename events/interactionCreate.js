@@ -21,7 +21,7 @@ module.exports = {
 		}
 
 	if (interaction.isButton()) {
-			button = interaction.customId
+			const button = interaction.customId
 			const command = interaction.client.commands.get(button);
 
 			if (!command) {

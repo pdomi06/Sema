@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const locales = require('../../configs/locales.json')
-const config = require('../../configs/config.json')
+require('dotenv').config()
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -13,7 +13,7 @@ module.exports = {
 			hu: 'Szerverről nyújt információkat.'
 		}),
 	async execute(interaction) {
-		const guild_pic = `https://cdn.discordapp.com/avatars/${interaction.guild.id}/${interaction.guild.icon}.png?size=1024`
+		//const guild_pic = `https://cdn.discordapp.com/avatars/${interaction.guild.id}/${interaction.guild.icon}.png?size=1024`
 
 		const profile = locales[`${interaction.locale}_guildjs_profile`] ?? " guild infos"
 		const id = locales[`${interaction.locale}_guildjs_id`] ?? "Id"
@@ -28,7 +28,7 @@ module.exports = {
 	
 
 		const guildEmbed = new EmbedBuilder()
-			.setColor(config.green)
+			.setColor(process.env.GREEN)
 			.setTitle(`${interaction.guild.name}${profile}`)
 			.addFields(
 				{ name: `🪪 | ${id}: `, value: `${interaction.guild.id}`, inline: true },

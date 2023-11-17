@@ -1,7 +1,7 @@
-module.exports = {
-	name: "finish",
-	async execute(queue) {
-        console.log("finish")
-        queue.textChannel.send('Finished!')
-	},
+module.exports = { 
+	name: "finish", 
+	async execute(queue) { 
+         
+        await queue.textChannel.send('Finished!') 
+	}, 
 };
