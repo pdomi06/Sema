@@ -13,7 +13,11 @@ module.exports = {
       .setColor(process.env.YELLOW)
       .setTitle("Message edited")
       .addFields(
-        { name: "Channel: ", value: `<#${newMessage.channelId}>`, inline: true },
+        {
+          name: "Channel: ",
+          value: `<#${newMessage.channelId}>`,
+          inline: true,
+        },
         {
           name: "Msg Author: ",
           value: `<@${newMessage.author.id}>`,
