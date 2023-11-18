@@ -81,7 +81,7 @@ module.exports = {
       .setFooter({ text: " " });
     await queue.textChannel.send({
       embeds: [playingEmbed],
-      components: [row1, row2],
+      components: [row1],
     });
   },
 };
