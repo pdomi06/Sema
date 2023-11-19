@@ -67,21 +67,32 @@ module.exports = {
           value: `\`${queue.filters.names.join(", ") ?? "None"}\``,
         },
         {
-          name: "Queue:",
-          value: `Volume: \`${queue.volume}%\` | Loop: \`${
+          name: "Volume:",
+          value: `\`${queue.volume}%\``,
+          inline: true
+        },
+        {
+          name: "Loop:",
+          value: `\`${
             queue.repeatMode
               ? queue.repeatMode === 2
                 ? "All Queue"
                 : "This Song"
               : "Off"
-          }\` | Autoplay: ${queue.autoplay ? "✅" : "❌"}`,
+          }\``,
+          inline: true
+        },
+        {
+          name: "Queue:",
+          value: `Autoplay: \`${queue.autoplay ? "✅" : "❌"}\``,
+          inline: true
         },
       )
       .setTimestamp()
       .setFooter({ text: " " });
     await queue.textChannel.send({
       embeds: [playingEmbed],
-      components: [row1, row2],
+      components: [row1],
     });
   },
 };
