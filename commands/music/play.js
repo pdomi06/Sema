@@ -25,13 +25,13 @@ module.exports = {
       });
     }
 
-    //const queue = client.distube.getQueue(interaction.guildId);
-
     try {
       await client.distube.play(voiceChannel, song, {
         textChannel: interaction.channel,
         member: member,
       });
+      const queue = client.distube.getQueue(interaction);
+      console.log(queue)
 
       const playEmbed = new EmbedBuilder()
         .setColor(process.env.GREEN)
