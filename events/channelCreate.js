@@ -1,15 +1,15 @@
 const { Events, EmbedBuilder } = require("discord.js");
+const { client } = require("../index.js");
 require("dotenv").config();
 
 module.exports = {
   name: Events.ChannelCreate,
   async execute(channel) {
-    const { QuickDB } = require("quick.db");
-    const db = new QuickDB();
 
-    const id = await db.get(`${channel.guild.id}.log_id`);
+    const id = await client.mongos.db("Test").collection("log_channels").findOne({guild_id: channel.guild.id});
     if (!id) return;
-    const ch = channel.client.channels.cache.get(id);
+
+    const ch = channel.client.channels.cache.get(parseInt(id));
     if (!ch) return;
 
     const isTextChannel = channel.type === 0;

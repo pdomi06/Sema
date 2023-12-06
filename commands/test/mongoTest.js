@@ -10,7 +10,7 @@ module.exports = {
     try {
       const collection = client.mongos.db("Test").collection("Test");
       const result = await collection.findOne();
-      interaction.reply(`Working: ${result.Test}`);
+      interaction.reply(`Working: ${result.value}`);
     } catch (error) {
       console.error(error);
     }
