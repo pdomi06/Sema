@@ -36,7 +36,7 @@ TOKEN=<Your token>
 
 ## 📖 Usage
 
-- 🎶 To listen to music, use the `!play` command followed by the name of the song or a YouTube link.
+- 🎶 To listen to music, use the `/play` command followed by the name of the song or a YouTube link.
 - 📝 To create custom commands, use the `!command` command followed by the name of the command and the response.
 
 ## 🤝 Contributing
