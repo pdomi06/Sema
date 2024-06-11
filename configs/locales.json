@@ -1,0 +1,30 @@
+{
+    "hu_homeworkjs_updated": "Frissítve",
+    
+    "hu_userjs_profile": " profilja",
+    "hu_userjs_id": "Azonosító",
+    "hu_userjs_nickname": "Becenév",
+    "hu_userjs_tag": "Tag",
+    "hu_userjs_bot": "Robot",
+    "hu_userjs_joinedAt": "Szerverhez csatlakozott",
+    "hu_userjs_createdAt": "Fiók ekkor készült",
+
+    "hu_guildjs_profile": " információi",
+    "hu_guildjs_id": "Azonosító",
+    "hu_guildjs_owner": "Tulaj",
+    "hu_guildjs_memberCount": "Létszám",
+    "hu_guildjs_afkTimeout": "Afk idő",
+    "hu_guildjs_afkChannel": "Afk csatorna",
+    "hu_guildjs_premiumCount": "Boostok száma",
+    "hu_guildjs_premiumTier": "Szerver boost szint",
+    "hu_guildjs_createdAr": "Szerver létre jötte",
+
+    "hu_stockjs_profile": "Eötvös részvény",
+
+    "hu_stocksjs_profile": "Eötvös részvények",
+
+    "hu_balancejs_profile": " Egyenlege",
+    "hu_balancejs_coin": "Érmék"
+
+    
+}
