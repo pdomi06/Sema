@@ -38,7 +38,7 @@ GENIUS_API=<Your API>
 
 ## 📖 Usage
 
-- 🎶 To listen to music, use the `/play` command followed by the name of the song or a YouTube link.
+- 🎶 To listen to music, use the `/play` command followed by the name of the song or a YouTube/Soundcloud/Spotify link.
 - 📝 To setup the log system, use the `/setup_log` command followed by the name of the channel.
 
 ## 🤝 Contributing
