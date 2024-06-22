@@ -29,6 +29,8 @@ GREEN=357F1E
 YELLOW=ABAD0D
 DEF_COLOR=<Your color>
 TOKEN=<Your token>
+MONGO_URI=<Yout mongo URI>
+GENIUS_API=<Your API>
 ```
 
 4. Run `dp.js` with your guild ID to set up the application integration
@@ -36,8 +38,8 @@ TOKEN=<Your token>
 
 ## 📖 Usage
 
-- 🎶 To listen to music, use the `!play` command followed by the name of the song or a YouTube link.
-- 📝 To create custom commands, use the `!command` command followed by the name of the command and the response.
+- 🎶 To listen to music, use the `/play` command followed by the name of the song or a YouTube link.
+- 📝 To setup the log system, use the `/setup_log` command followed by the name of the channel.
 
 ## 🤝 Contributing
 
