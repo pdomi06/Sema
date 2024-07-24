@@ -1,6 +1,6 @@
 # 🤖 Sema the ultimate Server-manager 🎵
 
-[![Discord Server](https://img.shields.io/discord/123456789012345678?color=7289DA&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/fVCZEmgws5)
+[![Discord Server](https://img.shields.io/discord/123456789012345678?color=7289DA&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/invite/fVCZEmgws5)
 [![DeepSource](https://app.deepsource.com/gh/pdomi06/Sema.svg/?label=active+issues&show_trend=true&token=8Dns4wboJzsClyuwwuG5XqFv)](https://app.deepsource.com/gh/pdomi06/Sema/)
 
 ## 📝 Project Description
@@ -29,6 +29,8 @@ GREEN=357F1E
 YELLOW=ABAD0D
 DEF_COLOR=<Your color>
 TOKEN=<Your token>
+MONGO_URI=<Yout mongo URI>
+GENIUS_API=<Your API>
 ```
 
 4. Run `dp.js` with your guild ID to set up the application integration
@@ -36,8 +38,8 @@ TOKEN=<Your token>
 
 ## 📖 Usage
 
-- 🎶 To listen to music, use the `!play` command followed by the name of the song or a YouTube link.
-- 📝 To create custom commands, use the `!command` command followed by the name of the command and the response.
+- 🎶 To listen to music, use the `/play` command followed by the name of the song or a YouTube/Soundcloud/Spotify link.
+- 📝 To setup the log system, use the `/setup_log` command followed by the name of the channel.
 
 ## 🤝 Contributing
 
