@@ -50,4 +50,11 @@ Welcome to our project! We appreciate your interest in contributing to our repos
 3. Submit a pull request with a clear description of your changes and why they are necessary.
 4. Be responsive to feedback and be willing to make changes if necessary.
 
+Looking for:
+
+1. More localization, including language options and multi-language commands.
+2. Economy system.
+3. Security features (anti-raid, moderator commands, etc.).
+4. Optimizations
+
 Thank you for your contributions! 🙏
