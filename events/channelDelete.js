@@ -7,7 +7,6 @@ module.exports = {
   async execute(channel) {
     const collection = client.mongos.db("Logs").collection("log_channels");
     const id = await collection.findOne({ guild_id: channel.guild.id });
-
     if (!id) return;
 
     const ch = channel.client.channels.cache.get(id.channel_id);
