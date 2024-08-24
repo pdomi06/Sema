@@ -5,7 +5,6 @@ require("dotenv").config();
 module.exports = {
   name: Events.ChannelDelete,
   async execute(channel) {
-
     const collection = client.mongos.db("Logs").collection("log_channels");
     const id = await collection.findOne({ guild_id: channel.guild.id });
 
