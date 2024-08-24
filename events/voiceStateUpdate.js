@@ -9,7 +9,7 @@ module.exports = {
 
     const collection = client.mongos.db("Logs").collection("log_channels");
     const id = await collection.findOne({ guild_id: user.guild.id });
-    
+
     if (!id) return;
 
     const ch = user.client.channels.cache.get(id.channel_id);
