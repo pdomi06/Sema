@@ -9,11 +9,8 @@ require("dotenv").config();
 module.exports = {
   name: "playSong",
   async execute(queue, song) {
-
-
     const messages = await queue.textChannel.messages.fetch();
     await queue.textChannel.bulkDelete(messages);
-
 
     const row1 = new ActionRowBuilder();
     //const row2 = new ActionRowBuilder();
@@ -39,7 +36,6 @@ module.exports = {
         .setCustomId("skip")
         .setEmoji("⏭️")
         .setStyle(ButtonStyle.Primary),
-
     );
     //		row2.addComponents(
     //			new ButtonBuilder()
@@ -58,9 +54,9 @@ module.exports = {
 
     let filters;
     if (queue.filters.names.join(", ") === ``) {
-      filters = "None"
+      filters = "None";
     } else {
-      filters = queue.filters.names.join(", ")
+      filters = queue.filters.names.join(", ");
     }
     const playingEmbed = new EmbedBuilder()
       .setColor(process.env.DEF_COLOR)
@@ -81,15 +77,15 @@ module.exports = {
         },
         {
           name: "Queue:",
-          value: `Volume: \`${queue.volume}%\` | Loop: \`${queue.repeatMode
-            ? queue.repeatMode === 2
-              ? "All Queue"
-              : "This Song"
-            : "Off"
-            }\` | Autoplay: ${queue.autoplay ? "✅" : "❌"}`,
-          inline: true
+          value: `Volume: \`${queue.volume}%\` | Loop: \`${
+            queue.repeatMode
+              ? queue.repeatMode === 2
+                ? "All Queue"
+                : "This Song"
+              : "Off"
+          }\` | Autoplay: ${queue.autoplay ? "✅" : "❌"}`,
+          inline: true,
         },
-
       )
       .setTimestamp()
       .setFooter({ text: " " });

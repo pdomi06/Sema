@@ -5,8 +5,6 @@ require("dotenv").config();
 module.exports = {
   name: Events.ChannelUpdatee, // <------------- the reason why it's not working
   async execute(oldChannel, newChannel) {
-
-
     const collection = client.mongos.db("Logs").collection("log_channels");
     const id = await collection.findOne({ guild_id: oldChannel.guild.id });
     if (!id) return;

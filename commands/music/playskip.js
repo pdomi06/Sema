@@ -18,7 +18,7 @@ module.exports = {
     const member = interaction.member;
     const voiceChannel = member.voice.channel;
     const queue = client.distube.getQueue(interaction.guildId);
-    const addedSong = queue.songs[queue.songs.length-1]
+    const addedSong = queue.songs[queue.songs.length - 1];
 
     if (!voiceChannel) {
       return interaction.reply({
@@ -40,31 +40,31 @@ module.exports = {
       await client.distube.play(voiceChannel, song, {
         member: member,
         textChannel: interaction.channel,
-      })
-      await queue.skip()
+      });
+      await queue.skip();
 
-      if(queue.songs.length > 1) {
+      if (queue.songs.length > 1) {
         const playEmbedPrep = new EmbedBuilder()
-        .setColor(process.env.GREEN)
-        .setTitle(" ✅ | Added: ")
-        .setURL(addedSong.url)
-        .setThumbnail(addedSong.thumbnail)
-        .addFields(
-          { name: "Name:", value: `\`${addedSong.name}\`` },
-          {
-            name: "Duration:",
-            value: `\`${addedSong.formattedDuration}\``
-          })
-        .setTimestamp()
-        .setFooter({ text: " " });
-        interaction.editReply({ embeds: [playEmbedPrep], ephemeral: true})
+          .setColor(process.env.GREEN)
+          .setTitle(" ✅ | Added: ")
+          .setURL(addedSong.url)
+          .setThumbnail(addedSong.thumbnail)
+          .addFields(
+            { name: "Name:", value: `\`${addedSong.name}\`` },
+            {
+              name: "Duration:",
+              value: `\`${addedSong.formattedDuration}\``,
+            },
+          )
+          .setTimestamp()
+          .setFooter({ text: " " });
+        interaction.editReply({ embeds: [playEmbedPrep], ephemeral: true });
         setTimeout(() => {
           interaction.deleteReply();
         }, 10000);
       } else {
-        await interaction.deleteReply()
+        await interaction.deleteReply();
       }
-      
     } catch (error) {
       console.error(error);
       interaction.reply({
