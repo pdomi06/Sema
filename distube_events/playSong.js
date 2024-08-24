@@ -53,7 +53,7 @@ module.exports = {
     //		)
 
     let filters;
-    if (queue.filters.names.join(", ") === ``) {
+    if (queue.filters.names.join(", ") === "") {
       filters = "None";
     } else {
       filters = queue.filters.names.join(", ");
