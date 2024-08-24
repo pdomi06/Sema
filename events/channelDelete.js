@@ -1,5 +1,5 @@
 const { Events, EmbedBuilder } = require("discord.js");
-const { QuickDB } = require("quick.db");
+const { client } = require("../index.js");
 require("dotenv").config();
 
 module.exports = {

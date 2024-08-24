@@ -9,7 +9,7 @@ module.exports = {
  
       async execute(interaction) { 
 
-        const voiceChannel = member.voice.channel;
+        const voiceChannel = interaction.member;
         const queue = client.distube.getQueue(interaction) 
 
         if (!voiceChannel) {
