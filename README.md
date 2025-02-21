@@ -65,3 +65,11 @@ We are looking for contributions in the following areas:
 Your contributions are highly appreciated!
 
 Thank you for your contributions! 🙏
+
+## 🌟 A Personal Note
+
+This is my first ever project, so please don't be too hard on me. I'm continuously learning and improving, and I appreciate any constructive feedback you may have.
+
+## 👨‍🏫 Seeking Mentorship
+
+I'm also looking for a mentor to help me build more projects and improve my skills. If you're experienced and willing to guide me, please reach out. Your mentorship would be invaluable to my growth as a developer.
