@@ -5,15 +5,19 @@
 
 ## 📝 Project Description
 
-This project is a Discord bot with several features, including system logging, music playing from various sources such as YouTube, Spotify, and SoundCloud, an ongoing economy system, and a simple database. The bot is designed to enhance the user experience on Discord servers by providing useful and entertaining features. This README file serves as documentation for the project, providing information on how to use and configure the bot.
+This project is a Discord bot with several features, including system logging, music playing from various sources such as YouTube, Spotify, and SoundCloud. The bot is designed to enhance the user experience on Discord servers by providing useful and entertaining features. This README file serves as documentation for the project, providing information on how to use and configure the bot.
 
 ## 🚀 Features
 
-- 🎵 Music playing through voice channel
+- 🎵 22 music command to listen your favourite music while playing/talking
 - 📜 Audit log in text channel
-- 💬 Simple commands
+- 💬 Some extra simple commands
 
 ## 🛠️ Installation
+
+**Before you begin:**
+
+This guide does not cover setting up MongoDB, obtaining your Discord token, or generating your Genius API key. Ensure you have these ready before proceeding. If any of these values are missing or incorrect in your `.env` file, the bot might not start or function properly.
 
 1. Clone the repository
 2. Install the dependencies with `npm install`
@@ -50,11 +54,14 @@ Welcome to our project! We appreciate your interest in contributing to our repos
 3. Submit a pull request with a clear description of your changes and why they are necessary.
 4. Be responsive to feedback and be willing to make changes if necessary.
 
-Looking for:
+## 🔍 Looking For
+
+We are looking for contributions in the following areas:
 
 1. More localization, including language options and multi-language commands.
-2. Economy system.
-3. Security features (anti-raid, moderator commands, etc.).
-4. Optimizations
+2. Additional music commands to enhance the user experience.
+3. Optimizations to improve performance and efficiency.
+
+Your contributions are highly appreciated!
 
 Thank you for your contributions! 🙏
